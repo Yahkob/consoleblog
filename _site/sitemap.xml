@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://consoleblog.azurewebsites.net</loc>
+    </url>
+    
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/404.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/about/</loc>
+    </url>
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/feed.xml</loc>
+    </url>
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/posts/</loc>
+    </url>
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/sitemap.xml</loc>
+    </url>
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/tags/</loc>
+    </url>
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/theme-setup/</loc>
+    </url>
+    
+
+    
+    <url>
+        <loc>http://consoleblog.azurewebsites.net/hack-reactor-week-3/</loc>
+    </url>
+    
+</urlset>
