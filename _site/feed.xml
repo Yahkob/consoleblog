@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://consoleblog.azurewebsites.net/feed.xml" />
 <link rel="alternate" type="text/html" href="http://consoleblog.azurewebsites.net" />
-<updated>2014-07-06T04:41:43-04:00</updated>
+<updated>2014-07-06T04:46:09-04:00</updated>
 <id>http://consoleblog.azurewebsites.net/</id>
 <author>
   <name>Jake Harclerode</name>
@@ -42,11 +42,11 @@ project = _site
 &lt;img src=&quot;/images/git.png&quot; /&gt;
 &lt;img src=&quot;/images/postsource.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case http://consoleblog.azurewebsites.net. Save your config file, commit and push to github then run&lt;/p&gt;
+&lt;p&gt;Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case http://YahkobTutorial.azurewebsites.net. Save your config file, commit and push to github then run&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;And that’s it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.&lt;/p&gt;
+&lt;p&gt;By doing this Jekyll will create your site directory. You will need to commit and push again so your sites directory you reference in your .deployment file will have an index.html file with all of your content. And that’s it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/jekyll-azure-deployment/&quot;&gt;Deploying Jekyll with Azure&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on June 20, 2014.&lt;/p&gt;</content>
 </entry>
