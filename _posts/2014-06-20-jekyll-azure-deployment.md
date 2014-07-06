@@ -26,10 +26,11 @@ Now that we've made a .deployment file it's time to make your website
 
 
 
-Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case http://consoleblog.azurewebsites.net. Save your config file, commit and push to github then run
+Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case http://YahkobTutorial.azurewebsites.net. Save your config file, commit and push to github then run
 
 {% highlight bash %}
 $ jekyll serve
 {% endhighlight %}
 
-And that's it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.
+
+By doing this Jekyll will create your site directory. You will need to commit and push again so your sites directory you reference in your .deployment file will have an index.html file with all of your content. And that's it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.
