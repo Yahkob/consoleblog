@@ -40,6 +40,10 @@
 
     
     <url>
+        <loc>http://consoleblog.azurewebsites.net/jekyll-azure-deployment/</loc>
+    </url>
+    
+    <url>
         <loc>http://consoleblog.azurewebsites.net/hack-reactor-week-3/</loc>
     </url>
     
