@@ -40,6 +40,10 @@
 
     
     <url>
+        <loc>http://consoleblog.azurewebsites.net/objects-part-one/</loc>
+    </url>
+    
+    <url>
         <loc>http://consoleblog.azurewebsites.net/jekyll-azure-deployment/</loc>
     </url>
     
