@@ -26,7 +26,7 @@ Now that we've made a .deployment file it's time to make your website
 
 
 
-Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case http://YahkobTutorial.azurewebsites.net. Save your config file then run
+Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case 'YahkobTutorial.azurewebsites.net'. Save your config file then run
 
 {% highlight bash %}
 $ jekyll build
@@ -38,10 +38,10 @@ if you want to preview your blog and make tweeks to it locally before you deploy
 $ jekyll serve
 {% endhighlight %}
 
-this will run on http://localhost:3000 even after you edit your url in config. By doing this Jekyll will create your site directory. Verify build created some sort of site directory. We need to make sure because this is referenced in your .deployment file. Make sure your site directory has an index.html file with all of your content. And that's it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.
+this will run on localhost:3000 even after you edit your url in config. By doing this Jekyll will create your site directory. Verify build created some sort of site directory. We need to make sure because this is referenced in your .deployment file. Make sure your site directory has an index.html file with all of your content. And that's it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.
 
 <h2> Optional step</h2>
-If you're blogging until your fingers set on fire you might consider making a simple grunt file. Not sure what Grunt is? Check out <a href="http://gruntjs.com/">gruntjs.com</a> if you're interested, essentially it's a task runner. You can do a lot of very useful and cool things with grunt but in this case I'm just going to automate
+If you're blogging until your fingers set on fire you might consider making a simple grunt file. Not sure what Grunt is? Check out <a href="http://www.gruntjs.com/">gruntjs.com</a> if you're interested, essentially it's a task runner. You can do a lot of very useful and cool things with grunt but in this case I'm just going to automate
 
 {% highlight bash %}
 $ jekyll build
