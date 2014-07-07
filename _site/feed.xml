@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://consoleblog.azurewebsites.net/feed.xml" />
 <link rel="alternate" type="text/html" href="http://consoleblog.azurewebsites.net" />
-<updated>2014-07-07T00:15:59-04:00</updated>
+<updated>2014-07-07T00:20:16-04:00</updated>
 <id>http://consoleblog.azurewebsites.net/</id>
 <author>
   <name>Jake Harclerode</name>
@@ -63,7 +63,7 @@ Something interesting worth mentioning, this could be done in essentially a line
   &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-Regexs are very powerful and an awesome tool to use if you know how. Regexs in alot of cases are faster than hard coded functions to solve small problems like this. Interestingly enough a regex and the function using a hash to store data are pretty much neck to neck as far as speed goes. Check out this &lt;a href=&quot;http://jsperf.com/regexvshash&quot;&gt;jsperf comparison&lt;/a&gt; I made and compare for yourself. I also included a nested for loop just to demonstrate how bad it is to achieve quadratic time complexity. Unless you can not avoid it try not to make your function quadratic at all costs! Seeing the comparison should be enough to prove to you objects are extremly powerful! Thanks for reading, I plan to write my next post about coffeescript and backbone and then hopefully Angular. Stay tuned!
+Regexs are very powerful and an awesome tool to use if you know how. Regexs in alot of cases are faster than hard coded functions to solve small problems like this. Interestingly enough a regex and the function using a hash to store data are pretty much neck to neck as far as speed goes. Check out this &lt;a href=&quot;http://jsperf.com/regexvshash&quot;&gt;jsperf comparison&lt;/a&gt; I made and compare for yourself. I also included a nested for loop just to demonstrate how bad it is to achieve quadratic time complexity. Unless you can not avoid it try not to make your function quadratic at all costs! Seeing the comparison should be enough to prove to you objects are extremly powerful! Thanks for reading, I plan to write my next post about coffeescript and backbone and then hopefully Angular. Also if the regex confused you and you&#39;re interested in learning more copy my regex and paste it into &lt;a href=&quot;http://regex101.com/&quot;&gt;regex 101&lt;/a&gt;. Stay tuned!
   &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/objects-part-two/&quot;&gt;Objects in Javascript part two&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on July 06, 2014.&lt;/p&gt;</content>
 </entry>
 
@@ -72,8 +72,8 @@ Regexs are very powerful and an awesome tool to use if you know how. Regexs in a
   <title type="html"><![CDATA[Objects in Javascript part one]]></title>
  <link rel="alternate" type="text/html" href="http://consoleblog.azurewebsites.net/objects-part-one/" />
   <id>http://consoleblog.azurewebsites.net/objects-part-one</id>
-  <published>2014-07-04T00:00:00-04:00</published>
-  <updated>2014-07-04T00:00:00-04:00</updated>
+  <published>2014-07-05T00:00:00-04:00</published>
+  <updated>2014-07-05T00:00:00-04:00</updated>
   <author>
     <name>Jake Harclerode</name>
     <uri>http://consoleblog.azurewebsites.net</uri>
@@ -86,7 +86,7 @@ Regexs are very powerful and an awesome tool to use if you know how. Regexs in a
 &lt;p&gt;Now what if we want to look up how Baconn made us feel when we inserted it into our hash table?
 We do the same thing as when we inserted it, we hash Baconn and it hashes to 4. So now we know we can look in index 4 for our desired element. Since there’s two keys we’ll have to iterate through the bucket. This may seem like a lot of work but think of the time complexity of iterating through an array with hundreds of items vs searching through a hash table with hundreds of items. The odds are you wouldn’t be iterating through nearly as many elements iterating through a specific bucket as you would iterating through a large array. In the worst case look up of an item would be linear, this would be if you had a bad hashing function or did not resize your hash when it got to big (which I didn’t go into). On average this will be constant time look up. You are given the index of the target element and in most cases you will only have to iterate through minimal items in a bucket to find the target element.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/objects-part-one/&quot;&gt;Objects in Javascript part one&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on July 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/objects-part-one/&quot;&gt;Objects in Javascript part one&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on July 05, 2014.&lt;/p&gt;</content>
 </entry>
 
 
