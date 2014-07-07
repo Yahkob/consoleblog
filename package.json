@@ -1,25 +1,24 @@
 {
-  "name": "hpstr-theme",
-  "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "http://mmistakes.github.io/hpstr-jekyll-theme/",
+  "name": "console.blog",
+  "author": "Jakob Harclerode",
+  "homepage": "http://consoleblog.io",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/hpstr-jekyll-theme.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mmistakes/hpstr-jekyll-theme/issues"
+    "url": "git://github.com/yahkob/consoleblog"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-shell-spawn": "~0.3.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.3",
     "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-watch": "~0.6.1",
     "grunt-recess": "~0.3.5",
     "grunt-contrib-imagemin": "~0.2.0",
-    "grunt-svgmin": "~0.2.0"
+    "grunt-svgmin": "~0.2.0",
+    "grunt-shell": "~0.7.0"
   }
 }

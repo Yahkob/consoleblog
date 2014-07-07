@@ -1,5 +1,5 @@
 title:            console.blog()
-description:      Code talk and things of tech
+description:      Code talk and things of tech..
 disqus_shortname:
 reading_time:     true
 words_per_minute: 200
@@ -10,12 +10,12 @@ url:              http://consoleblog.azurewebsites.net
 owner:
   name:           Jake Harclerode
   avatar:         avatar.jpg
-  bio:            "Software Engineer, Proud Father, Viking Metal Connoisseur, San Fransisco"
+  bio:            "Software Engineer, Viking Metal Connoisseur, San Fransisco"
   email:          jakobharclerode@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter: jakeharclerode
   facebook:
-  github:
+  github: Yahkob
   stackexchange:
   linkedin:
   instagram:

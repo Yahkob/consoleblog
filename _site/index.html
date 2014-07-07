@@ -79,7 +79,7 @@
 				<li>
 					<img src="http://consoleblog.azurewebsites.net/images/avatar.jpg" alt="Jake Harclerode photo" class="author-photo">
 					<h4>Jake Harclerode</h4>
-					<p>Software Engineer, Proud Father, Viking Metal Connoisseur, San Fransisco</p>
+					<p>Software Engineer, Viking Metal Connoisseur, San Fransisco</p>
 				</li>
 				<li>
 					<a href="mailto:jakobharclerode@gmail.com"><i class="fa fa-envelope"></i> Email</a>
@@ -90,7 +90,9 @@
 				
 				
 				
-				
+				<li>
+					<a href="http://github.com/Yahkob"><i class="fa fa-github"></i> GitHub</a>
+				</li>
 				
 				
 				
@@ -161,7 +163,7 @@ We do the same thing as when we inserted it, we hash Baconn and it hashes to 4. 
       <span class="entry-reading-time pull-right">
         <i class="fa fa-clock-o"></i>
         
-        Reading time ~1 minute
+        Reading time ~3 minutes
       </span><!-- /.entry-reading-time -->
       
     </div><!-- /.entry-meta -->
@@ -188,11 +190,58 @@ project = _site
 <img src="/images/git.png" />
 <img src="/images/postsource.png" /></p>
 
-<p>Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case http://YahkobTutorial.azurewebsites.net. Save your config file, commit and push to github then run</p>
+<p>Select github and the repository you have your blog in. Before you deploy edit your _config.yml, feel free to edit and personalize any information you see fit in your config file but you have to change the url property from localhost:3000 to your azure url we created. In my case http://YahkobTutorial.azurewebsites.net. Save your config file then run</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>jekyll build</code></pre></div>
+
+<p>if you want to preview your blog and make tweeks to it locally before you deploy it you can simply run</p>
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>jekyll serve</code></pre></div>
 
-<p>By doing this Jekyll will create your site directory. You will need to commit and push again so your sites directory you reference in your .deployment file will have an index.html file with all of your content. And that’s it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.</p>
+<p>this will run on http://localhost:3000 even after you edit your url in config. By doing this Jekyll will create your site directory. Verify build created some sort of site directory. We need to make sure because this is referenced in your .deployment file. Make sure your site directory has an index.html file with all of your content. And that’s it your Jekyll blog is deployed to azure! Azure will automatically redeploy from your github everytime you push to your github.</p>
+
+<h2> Optional step</h2>
+<p>If you’re blogging until your fingers set on fire you might consider making a simple grunt file. Not sure what Grunt is? Check out <a href="http://gruntjs.com/">gruntjs.com</a> if you’re interested, essentially it’s a task runner. You can do a lot of very useful and cool things with grunt but in this case I’m just going to automate</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>jekyll build</code></pre></div>
+
+<p>whenever you save a file. First run the following</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>npm install grunt
+<span class="nv">$ </span>npm install grunt-shell
+<span class="nv">$ </span>npm install grunt-contrib-watch</code></pre></div>
+
+<p>There should already be a Gruntfile.js I might be doing something terribly wrong but I never use the default Gruntfile we get for free. Just put the default one in a safe place and make a new file with the same name.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+    <span class="nx">shell</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">command</span><span class="o">:</span> <span class="s1">&#39;jekyll build&#39;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">scripts</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;_config.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;_posts/*&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;shell:build&#39;</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-shell&#39;</span><span class="p">);</span>
+<span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-watch&#39;</span><span class="p">);</span>
+<span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;watch&#39;</span><span class="p">]);</span>
+
+<span class="p">};</span></code></pre></div>
+
+<p>First we’ll need to setup our Grunt file. I won’t go too much into the syntax or why what does what. We’re going to need to set up the configuration of our grunt file. We first need to setup a way for grunt to read our package.json so grunt can import data from package.json. Then with our shell module we can specify what command we want grunt to execute in terminal in this case jekyll build. After that we’ll set up which files to watch and what to do when they change. In case the asterik is confusing to you it just means literally any file in _posts. We then set its task to build from shell. Load in your modules then register grunts default behavior when you run</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>grunt</code></pre></div>
+
+<p>and there you have it. When you run this your jekyll site will build automatically. All you have to do is commit and push.</p>
+
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
