@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">console.blog()</title>
+<title type="text">JS Harclerode</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://consoleblog.azurewebsites.net/feed.xml" />
 <link rel="alternate" type="text/html" href="http://consoleblog.azurewebsites.net" />
-<updated>2014-07-07T00:21:25-04:00</updated>
+<updated>2014-07-07T00:31:21-04:00</updated>
 <id>http://consoleblog.azurewebsites.net/</id>
 <author>
   <name>Jake Harclerode</name>
@@ -65,7 +65,7 @@ Something interesting worth mentioning, this could be done in essentially a line
 
 &lt;p&gt;Regexs are very powerful and an awesome tool to use if you know how. Regexs in alot of cases are faster than hard coded functions to solve small problems like this. Interestingly enough a regex and the function using a hash to store data are pretty much neck to neck as far as speed goes. Check out this &lt;a href=&quot;http://jsperf.com/regexvshash&quot;&gt;jsperf comparison&lt;/a&gt; I made and compare for yourself. I also included a nested for loop just to demonstrate how bad it is to achieve quadratic time complexity. Unless you can not avoid it try not to make your function quadratic at all costs! Seeing the comparison should be enough to prove to you objects are extremly powerful! Thanks for reading, I plan to write my next post about coffeescript and backbone and then hopefully Angular. Also if the regex confused you and you’re interested in learning more copy my regex and paste it into &lt;a href=&quot;http://regex101.com/&quot;&gt;regex 101&lt;/a&gt;. Stay tuned!&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/objects-part-two/&quot;&gt;Objects in Javascript part two&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on July 06, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/objects-part-two/&quot;&gt;Objects in Javascript part two&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;JS Harclerode&lt;/a&gt; on July 06, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -87,7 +87,7 @@ Something interesting worth mentioning, this could be done in essentially a line
 &lt;p&gt;Now what if we want to look up how Baconn made us feel when we inserted it into our hash table?
 We do the same thing as when we inserted it, we hash Baconn and it hashes to 4. So now we know we can look in index 4 for our desired element. Since there’s two keys we’ll have to iterate through the bucket. This may seem like a lot of work but think of the time complexity of iterating through an array with hundreds of items vs searching through a hash table with hundreds of items. The odds are you wouldn’t be iterating through nearly as many elements iterating through a specific bucket as you would iterating through a large array. In the worst case look up of an item would be linear, this would be if you had a bad hashing function or did not resize your hash when it got to big (which I didn’t go into). On average this will be constant time look up. You are given the index of the target element and in most cases you will only have to iterate through minimal items in a bucket to find the target element.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/objects-part-one/&quot;&gt;Objects in Javascript part one&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on July 05, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/objects-part-one/&quot;&gt;Objects in Javascript part one&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;JS Harclerode&lt;/a&gt; on July 05, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -173,7 +173,7 @@ project = _site
 &lt;p&gt;and there you have it. When you run this your jekyll site will build automatically. All you have to do is commit and push.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/jekyll-azure-deployment/&quot;&gt;Deploying Jekyll with Azure&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on June 20, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/jekyll-azure-deployment/&quot;&gt;Deploying Jekyll with Azure&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;JS Harclerode&lt;/a&gt; on June 20, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -202,7 +202,7 @@ project = _site
 
 &lt;p&gt;Looking back to last September when I started to prepare for all of this seems like a lifetime but I wouldn’t give it up for anything. The main point of this post was to let you know if you’re applying for a programming bootcamp and don’t get accepted at first never give up keep on trying, it’s very worth it. So here I am at my third week of Hack Reactor and even though it has been very sad to be away from my beautiful girlfriend and amazing newborn son it has been an awesome experience. If you made it this far I commend you this is basically five blog posts I should have wrote but just compiled it into one huge one. I plan on blogging here as much as I can about my experience at Hack Reactor. If you have any questions or want any advice or interested in learning to code/getting into a bootcamp please reach out to me. I was in the same position as you reading Hack Reactorers(?) blogs before I got accepted.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/hack-reactor-week-3/&quot;&gt;Hack Reactor Week 3ish&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;console.blog()&lt;/a&gt; on June 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/hack-reactor-week-3/&quot;&gt;Hack Reactor Week 3ish&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;JS Harclerode&lt;/a&gt; on June 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
