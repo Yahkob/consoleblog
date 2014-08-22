@@ -1,0 +1,44 @@
+<p>Today I wanted to talk about some interesting things I’ve found out about CSS3. First off lets talk about tables.. they are terrible. Unless of course you are displaying tabulature data with them. Maybe you don’t want to use a table though maybe you just want to use some divs and have them behave like they are tables. You can still do this without using a table tag! Here’s how:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;pseudo-table&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;pseudo-row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;pseudo-data&quot;</span><span class="nt">&gt;</span>
+      I&#39;m some data!
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>So we have some divs the same way we would have a table, rows and table data set up. Now we need a way to make our divs act like tables without table tags so people won’t make fun of us we can do this by simply setting each classes CSS accordingly:</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.pseudo-table</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="n">table</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.pseudo-row</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="k">table-row</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.pseudo-data</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="k">table-cell</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>There you have it all of these formerly boring divs are now exciting tables. Now one thing tables are terrible at are being responsive.. now it depends on what your definition of a responsive table is. You may want your table to collapse vertically or you may want your table to retain the same shape and just get smaller. I recently was part of a project <a href="http://javascriptbattle.com">Javascript Battle</a> where one challenge was to make a “game board” of sorts and to make that board responsive. I used the exact same method I described above, using divs and assigning table like properties to said divs. First off you need to ask yourself what you want your applications content to look like. Do you want elements to stay the exact same size? Use an absolute length unit like <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">px</a>. Do you want things to shrink or expand as you widen or narrow your display? Use something like vw(view port width) vw adjusts elements size to the size of the users display. Open your dev tools and watch as you expand or narrow your browser. Depending on which browser you use it should show you the width and height of your browser(Chrome is the top right hand side). You might notice if you made a square div that is 10vw tall and wide that if you went from a 1200px wide display to a 700px wide display the square would shrink but retain shape. For the most part shrinking and expanding your browser horizontally should be when you use this view width. If you for some reason desire things to shrink when you vertically shrink or expand your browser you can use vh(viewpoint height) which does the same thing as vw but.. you guessed it makes things vertically responsive. One thing that confused me when starting to make responsive layouts was intuitively it made more sense for % to make elements responsive. Where I was wrong is when you set an elements width/height using percent you are setting the percent corresponding to its parent element. For instance you have a 200px tall div, you put another div inside of it and set it to a height of 40% this would then translate to an 80px tall div. Now that I’ve covered some basic responsive fundamentals there is a caveat that comes into the picture. No matter how hard you try elements on your application might not always act as you would like them to, especially when it comes to developing responsive mobile friendly apps. Thats where @media comes in, @media is a magical tool that allows you to change your CSS on specific conditions. For instance lets say you have a drop down menu and as soon as you shrink your browser window to a certain size you run out of room and want to hide said menu.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>option 1<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>option 2<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>option 3<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>option 4<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span></code></pre></div>
+
+<p>Maybe once the display is to 600px you want to hide the drop down. You can make a @media query</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">600px</span><span class="o">)</span> <span class="p">{</span>
+
+  <span class="nc">.dropdown</span> <span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="p">}</span></code></pre></div>
+
+<p>Bascially we just said when the width of the browser is 600px change the CSS of the classes nested in @media. And the menu is gone! Now go make your application do really cool stuff with your new knowledge of CSS3 magic.</p>

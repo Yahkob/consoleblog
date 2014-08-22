@@ -4,13 +4,73 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://consoleblog.azurewebsites.net/feed.xml" />
 <link rel="alternate" type="text/html" href="http://consoleblog.azurewebsites.net" />
-<updated>2014-08-19T17:54:34-04:00</updated>
+<updated>2014-08-21T21:42:26-04:00</updated>
 <id>http://consoleblog.azurewebsites.net/</id>
 <author>
   <name>Jake Harclerode</name>
   <uri>http://consoleblog.azurewebsites.net/</uri>
   <email>jakobharclerode@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Responsive Design and @media]]></title>
+ <link rel="alternate" type="text/html" href="http://consoleblog.azurewebsites.net/css-tricks/" />
+  <id>http://consoleblog.azurewebsites.net/css-tricks</id>
+  <published>2014-08-10T00:00:00-04:00</published>
+  <updated>2014-08-10T00:00:00-04:00</updated>
+  <author>
+    <name>Jake Harclerode</name>
+    <uri>http://consoleblog.azurewebsites.net</uri>
+    <email>jakobharclerode@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Today I wanted to talk about some interesting things I’ve found out about CSS3. First off lets talk about tables.. they are terrible. Unless of course you are displaying tabulature data with them. Maybe you don’t want to use a table though maybe you just want to use some divs and have them behave like they are tables. You can still do this without using a table tag! Here’s how:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pseudo-table&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pseudo-row&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pseudo-data&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      I&amp;#39;m some data!
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So we have some divs the same way we would have a table, rows and table data set up. Now we need a way to make our divs act like tables without table tags so people won’t make fun of us we can do this by simply setting each classes CSS accordingly:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.pseudo-table&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.pseudo-row&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table-row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.pseudo-data&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table-cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There you have it all of these formerly boring divs are now exciting tables. Now one thing tables are terrible at are being responsive.. now it depends on what your definition of a responsive table is. You may want your table to collapse vertically or you may want your table to retain the same shape and just get smaller. I recently was part of a project &lt;a href=&quot;http://javascriptbattle.com&quot;&gt;Javascript Battle&lt;/a&gt; where one challenge was to make a “game board” of sorts and to make that board responsive. I used the exact same method I described above, using divs and assigning table like properties to said divs. First off you need to ask yourself what you want your applications content to look like. Do you want elements to stay the exact same size? Use an absolute length unit like &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/length&quot;&gt;px&lt;/a&gt;. Do you want things to shrink or expand as you widen or narrow your display? Use something like vw(view port width) vw adjusts elements size to the size of the users display. Open your dev tools and watch as you expand or narrow your browser. Depending on which browser you use it should show you the width and height of your browser(Chrome is the top right hand side). You might notice if you made a square div that is 10vw tall and wide that if you went from a 1200px wide display to a 700px wide display the square would shrink but retain shape. For the most part shrinking and expanding your browser horizontally should be when you use this view width. If you for some reason desire things to shrink when you vertically shrink or expand your browser you can use vh(viewpoint height) which does the same thing as vw but.. you guessed it makes things vertically responsive. One thing that confused me when starting to make responsive layouts was intuitively it made more sense for % to make elements responsive. Where I was wrong is when you set an elements width/height using percent you are setting the percent corresponding to its parent element. For instance you have a 200px tall div, you put another div inside of it and set it to a height of 40% this would then translate to an 80px tall div. Now that I’ve covered some basic responsive fundamentals there is a caveat that comes into the picture. No matter how hard you try elements on your application might not always act as you would like them to, especially when it comes to developing responsive mobile friendly apps. Thats where @media comes in, @media is a magical tool that allows you to change your CSS on specific conditions. For instance lets say you have a drop down menu and as soon as you shrink your browser window to a certain size you run out of room and want to hide said menu.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dropdown&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;option 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;option 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;3&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;option 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;4&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;option 4&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Maybe once the display is to 600px you want to hide the drop down. You can make a @media query&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;600px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;nc&quot;&gt;.dropdown&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Bascially we just said when the width of the browser is 600px change the CSS of the classes nested in @media. And the menu is gone! Now go make your application do really cool stuff with your new knowledge of CSS3 magic.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://consoleblog.azurewebsites.net/css-tricks/&quot;&gt;Responsive Design and @media&lt;/a&gt; was originally published by Jake Harclerode at &lt;a href=&quot;http://consoleblog.azurewebsites.net&quot;&gt;JS Harclerode&lt;/a&gt; on August 10, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
